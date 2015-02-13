@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     jshintStylish = require('jshint-stylish'),
     jscs = require('gulp-jscs');
 
-var JS_SOURCES = ['*.js', 'bin/**/*.js', 'ci/**/*.js', 'new-ci/**/*.js', 'lib/**/*.js', 'test/**/*.js'];
+var JS_SOURCES = ['*.js', 'src/**/*.js', 'test/**/*.js'];
 
 gulp.task('jshint', function () {
   return gulp.src(JS_SOURCES)

@@ -1,4 +1,4 @@
-/*global describe, it, expect, window */
+/* global describe, it, expect, window */
 "use strict";
 
 describe('add', function () {
