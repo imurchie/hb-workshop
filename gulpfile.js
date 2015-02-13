@@ -1,7 +1,6 @@
 "use strict";
 
 var gulp = require('gulp'),
-    path = require('path'),
     jshint = require('gulp-jshint'),
     jshintStylish = require('jshint-stylish'),
     jscs = require('gulp-jscs');
@@ -14,7 +13,7 @@ gulp.task('jshint', function () {
     .pipe(jshint.reporter(jshintStylish))
     .pipe(jshint.reporter('fail'));
 });
-    
+
 gulp.task('jscs', function () {
   return gulp.src(JS_SOURCES)
     .pipe(jscs({configPath: __dirname + '/.jscsrc'}));

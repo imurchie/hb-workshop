@@ -1,3 +1,6 @@
+/*global describe, it, expect, window */
+"use strict";
+
 describe('add', function () {
   it('should add two numbers and return the result', function () {
     expect(window.add(1, 2)).toBe(3);
