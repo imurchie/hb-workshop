@@ -1,0 +1,36 @@
+{
+  "name": "hb-workshop-jsunit",
+  "version": "0.0.1",
+  "description": "JS unit test examples for Hackbright workshop",
+  "main": "index.js",
+  "dependencies": {
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-jasmine": "^0.3.5",
+    "karma-safari-launcher": "^0.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "karma start local.karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imurchie/hb-workshop-jsunit.git"
+  },
+  "keywords": [
+    "hackbright",
+    "javascript",
+    "unittest",
+    "jsunit",
+    "karma",
+    "jasmine"
+  ],
+  "author": "Isaac A. Murchie",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/imurchie/hb-workshop-jsunit/issues"
+  },
+  "homepage": "https://github.com/imurchie/hb-workshop-jsunit"
+}
