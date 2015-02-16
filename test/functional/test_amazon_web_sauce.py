@@ -16,26 +16,26 @@ USERNAME = os.environ.get('SAUCE_USERNAME')
 ACCESS_KEY = os.environ.get('SAUCE_ACCESS_KEY')
 sauce = SauceClient(USERNAME, ACCESS_KEY)
 
-browsers = [#{
-            #    "platform": "Mac OS X 10.9",
-            #    "browserName": "chrome",
-            #    "version": "31"
-            #},
-            #{
-            #    "platform": "Windows 8.1",
-            #    "browserName": "internet explorer",
-            #    "version": "11"
-            #},
+browsers = [{
+                "platform": "OS X 10.10",
+                "browserName": "chrome",
+                "version": "38"
+            },
+            {
+                "platform": "OS X 10.10",
+                "browserName": "Safari",
+                "version": "8.0"
+            },
+            {
+                "platform": "Windows 8.1",
+                "browserName": "internet explorer",
+                "version": "11"
+            },
             {
                 "platform": "Windows XP",
                 "browserName": "internet explorer",
                 "version": "6"
-            },
-            #{
-            #    "platform": "OSX 10.9",
-            #    "browserName": "firefox",
-            #    "version": "beta"
-            ]#},]
+            },]
 
 
 def on_platforms(platforms):
@@ -76,8 +76,11 @@ class TestAmazonWebSauce(unittest.TestCase):
     def test_sauce(self):
         self.driver.get("http://www.amazon.com")
         assert "Amazon" in self.driver.title
-        print self.driver.page_source
         elem = self.driver.find_element_by_id("twotabsearchtextbox")
         elem.send_keys("javascript testing")
-        elem.send_keys(Keys.RETURN)
-        assert "results for \"javascript testing\"" not in self.driver.page_source
+        #submit = self.driver.find_element_by_css_selector(".nav-submit-input")
+        #submit.click()
+        #sleep(5)
+        elem.send_keys(Keys.ENTER)
+        sleep(2)
+        self.assertIn(u"\"javascript testing\"", self.driver.page_source)
