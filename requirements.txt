@@ -1,0 +1,4 @@
+selenium==2.42.1
+pytest==2.6.3
+pytest-xdist==1.11
+sauceclient==0.1.0
