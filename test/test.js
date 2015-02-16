@@ -1,13 +1,27 @@
-/* global describe, it, expect, window */
+/* global describe, it, expect, window, beforeEach, beforeAll, afterEach, afterAll */
 "use strict";
 
-describe('add', function () {
-  it('should add two numbers and return the result', function () {
+describe('math', function () {
+  beforeAll(function () {
+    console.log("Math: beforeAll()");
+  });
+
+  afterAll(function () {
+    console.log("Math: afterAll()");
+  });
+
+  beforeEach(function () {
+    console.log("Math: before()");
+  });
+
+  afterEach(function () {
+    console.log("Math: after()");
+  });
+  
+  it('should add two numbers', function () {
     expect(window.add(1, 2)).toBe(3);
   });
-});
 
-describe('subtract', function () {
   it('should subtract two numbers', function () {
     expect(window.subtract(2, 1)).toBe(1);
   });
