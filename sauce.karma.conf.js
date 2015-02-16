@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-module.exports = function(config) {
+module.exports = function (config) {
 
   // Use ENV vars on Travis and sauce.json locally to get credentials
   if (!process.env.SAUCE_USERNAME) {
@@ -69,7 +69,7 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
 
     browsers: Object.keys(customLaunchers),
-    singleRun: true
+    singleRun: false
   });
 };
 
