@@ -39,8 +39,8 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'src/*.js',
-      'test/*.js'
+      'src/**/*.js',
+      'test/**/*.js'
     ],
 
 
@@ -60,7 +60,7 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
 
     sauceLabs: {
-      testName: 'Karma and Sauce Labs demo'
+      testName: 'HackBright Karma and Sauce Labs demo'
     },
     captureTimeout: 120000,
     customLaunchers: customLaunchers,
@@ -69,7 +69,7 @@ module.exports = function (config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
 
     browsers: Object.keys(customLaunchers),
-    singleRun: false
+    singleRun: true 
   });
 };
 
