@@ -17,7 +17,15 @@ module.exports = function (config) {
   var customLaunchers = {
     'SL_Chrome': {
       base: 'SauceLabs',
-      browserName: 'chrome'
+      platform: 'Windows 7',
+      browserName: 'chrome',
+      version: '35'
+    },
+    'SL_IOS_SAFARI': {
+      base: 'SauceLabs',
+      platform: 'OS X 10.10',
+      browserName: 'iphone',
+      version: '7.1'
     },
     'SL_IE': {
       base: 'SauceLabs',
@@ -60,7 +68,7 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
 
     sauceLabs: {
-      testName: 'HackBright Karma and Sauce Labs demo'
+      testName: 'HackBright Karma and Sauce Labs demo',
     },
     captureTimeout: 120000,
     customLaunchers: customLaunchers,
