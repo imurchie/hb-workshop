@@ -30,11 +30,6 @@ browsers = [{
                 "platform": "Windows 8.1",
                 "browserName": "internet explorer",
                 "version": "11"
-            },
-            {
-                "platform": "Windows XP",
-                "browserName": "internet explorer",
-                "version": "6"
             },]
 
 
